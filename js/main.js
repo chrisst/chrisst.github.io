@@ -1,4 +1,4 @@
-console.log("woo2")
+console.log("woo3")
 
 var countDownDate = new Date("Jan 6, 2022 09:00:00").getTime();
 
@@ -8,7 +8,7 @@ var x = setInterval(function () {
 
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) % 2);
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
