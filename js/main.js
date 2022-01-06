@@ -1,6 +1,6 @@
 console.log("woo2")
 
-var countDownDate = new Date("Jan 5, 2022 14:22:00").getTime();
+var countDownDate = new Date("Jan 5, 2022 18:00:00").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
