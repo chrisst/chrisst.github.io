@@ -2,7 +2,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGS1EJW8DD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-XGS1EJW8DD');
@@ -22,11 +22,26 @@
     text-align: center;
   }
 
-  .box {
-    margin: auto;
-    width: 50%;
+  .content {
     border: 3px solid blue;
+    padding: 2%;
+  }
+
+  .right {
+    grid-area: right;
+  }
+
+  .left {
+    grid-area: left;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'left right';
+    grid-gap: 10px;
     padding: 10px;
+    grid-template-columns: 1fr fit-content(60%);
   }
 
   body {
@@ -41,12 +56,36 @@
     Success!!
     <img style="display: block; padding-top: 20px; margin: auto; max-width: 100%" src="img/stephens.jpg" />
   </div>
-  <div class="box">
-    <p>Name: TBD</p>
-    <p>Birthday: 01/12/22 9:18pm</p>
-    <p>Weight: 8 lbs 5 oz</p>
-    <p>Length: 20 cm</p>
-    <p>Head: 36 1/2 cm</p>
-    <p>with love, Chris</p>
+  <div class="grid-container">
+    <div class="content left">
+      <p style="font-weight:bold;">Deets</p>
+      <p>Name: TBD</p>
+      <p>Birthday: 01/12/22 9:18pm</p>
+      <p>Weight: 8 lbs 5 oz</p>
+      <p>Length: 20 cm</p>
+      <p>Head: 36 1/2 cm</p>
+    </div>
+
+    <div class="content right">
+      <p style="font-weight:bold;">Visitor Guidance</p>
+      <p>
+        Many of you have asked about what you can do to help. We would love any gifts of frozen food. If you would like
+        to send fresh food just text us first so we can coordinate fridge space.
+      </p>
+      <p style="font-weight:bold;">Covid Policy</p>
+      <p>
+        As you know, we are in another covid 19 surge. So for the next few weeks we ask that if anybody is going to
+        visit they follow these guidelines:
+      </p>
+
+      <ul style="list-style-position: inside;">
+        <li>No visitors indoors currently</li>
+        <li>No holding the newborn</li>
+        <li>Please do not visit if you have been travelling</li>
+        <li>Please do not visit if you have any symptoms of any illness (covid or not)</li>
+        <li>Please do not visit if you have a recent known exposure</li>
+      </ul>
+
+    </div>
   </div>
 </body>
